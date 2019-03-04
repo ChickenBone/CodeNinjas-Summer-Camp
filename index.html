@@ -8,6 +8,8 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <h4>Directions</h4>
+    <p>Click anywhere in the webcam to select a color then adjust the tolerance to get the color detected. then watch it track</p>
     <div class="display">
       <video id="webcam" width="640" height="480" autoplay style="z-index: -100;"></video>
       <canvas id="canvas" width="640" height="480"></canvas>
@@ -15,11 +17,13 @@
     <div class="ui">
       <div class="controls">
         <div>
+          <label for="tolerance">Change this for the tolerance for the selected color</label>
           <input id="tolerance" type="range" value="50" max="255" min="0" step="1">
         </div>
       </div>
       <div id="color"></div>
     </div>
+    <label for="log">This is a Output Log For Development Purposes</label>
     <div id="log">
         <p>Output Log</p>
     </div>

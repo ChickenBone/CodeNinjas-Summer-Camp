@@ -38,10 +38,8 @@ canvas {
     flex-grow: 1;
   }
   #log{
-    max-height: 200px !important;
+    max-height: 80px;
     overflow: scroll;
-    position: absolute;
-    margin-top: 100vw;
   }
   .ui #color {
     box-sizing: border-box;

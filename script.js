@@ -47,10 +47,10 @@ function getColorAt(webcam, x, y) {
   context.drawImage(webcam, 0, 0, webcam.width, webcam.height);
   var pixel = context.getImageData(x, y, 1, 1).data;
   return {r: pixel[0], g: pixel[1], b: pixel[2]};
-
 }
 function drawRect(rect, context, color) {
   context.strokeStyle = "rgb(" + color.r + ", " + color.g + ", " + color.b + ")";
+  
   context.strokeRect(rect.x, rect.y, rect.width, rect.height);
   log("x: "+rect.x+ " y: "+rect.y)
 }
