@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TrackingJS Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="tracking-min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="display">
+      <video id="webcam" width="640" height="480" autoplay style="z-index: -100;"></video>
+      <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+    <div class="ui">
+      <div class="controls">
+        <div>
+          <input id="tolerance" type="range" value="50" max="255" min="0" step="1">
+        </div>
+      </div>
+      <div id="color"></div>
+    </div>
+    <div id="log">
+        <p>Output Log</p>
+    </div>
+  </body>
+</html>
