@@ -1,8 +1,10 @@
 function log(message){
+  setTimeout(function(){},100)
   console.log(message)
   var p = document.getElementById("log")
   p.innerHTML += '<br>' + message;
   p.scrollTop = p.scrollHeight;
+
 }
 window.addEventListener("load", function(e) {
   var color = {r: 240, g: 100, b: 100};
@@ -50,7 +52,7 @@ function getColorAt(webcam, x, y) {
 }
 function drawRect(rect, context, color) {
   context.strokeStyle = "rgb(" + color.r + ", " + color.g + ", " + color.b + ")";
-  
+  context.fillRect((rect.x+(rect.width)/2),(rect.y+(rect.height)/2),6,6);
   context.strokeRect(rect.x, rect.y, rect.width, rect.height);
   log("x: "+rect.x+ " y: "+rect.y)
 }
