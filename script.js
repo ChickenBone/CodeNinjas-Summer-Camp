@@ -1,3 +1,4 @@
+const sample = 20
 function log(message) {
   if (document.getElementById("dev").checked) {
     setTimeout(function () { }, 500)
@@ -27,7 +28,7 @@ function spots(x, y) {
   this.arr = []
   this.store = function (x, y) {
 
-    if (this.arr.length >= 10) {
+    if (this.arr.length >= sample) {
       tempx = this.arr["4"].x
       tempy = this.arr["4"].y
       this.arr = []
@@ -92,10 +93,10 @@ function spots(x, y) {
     tr = this.right()
     tu = this.up()
     td = this.down()
-    if(tl > 4) return "left"
-    if(tr > 4) return "right"
-    if(tu > 4) return "up"
-    if(td > 4) return "down"
+    if(tl > 8) return "left"
+    if(tr > 8) return "right"
+    if(tu > 2) return "up"
+    if(td > 2) return "down"
     return
   }
 }
